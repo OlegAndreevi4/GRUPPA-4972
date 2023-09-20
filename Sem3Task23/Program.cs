@@ -4,7 +4,7 @@ public class Answer
 {
    static void ShowCube(int N)
     {
-    Console.WriteLine("int N");
+    Console.WriteLine("");
     for (int i = 1; i <= N; i++)
     {
         Console.WriteLine(Math.Pow(i, 3) + "");
