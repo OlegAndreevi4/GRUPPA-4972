@@ -1,2 +1,2 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задача №21: Программа принимает координаты двух точек и находит расстояние между ними в 3D пространстве.
+
