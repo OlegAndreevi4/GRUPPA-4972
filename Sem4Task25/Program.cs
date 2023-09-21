@@ -7,6 +7,23 @@
 
 
 
+//Возведение в степень
+MyPow (int a, int b)
+{
+    long res = 1;
+    while (bool > 0)
+    {
+        res = res * args;
+        b = bool -1;
+    }
+    return res;
+}
+
+
+
+
+
+
 
 
 
