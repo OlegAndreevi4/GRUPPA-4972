@@ -1,5 +1,6 @@
 ﻿// Задача 24: Напишите программу, которая
 // принимает на вход число (А) и выдаёт сумму чисел от 1 до А.
+// Со счётчиком времени решения.
 
 //Вводим данные
 int ReadData(string msg)
@@ -9,14 +10,11 @@ int ReadData(string msg)
     return num;
 }
 
-
-
 //Печатаем результат
 void PrintResult(string msg)
 {
     Console.WriteLine(msg);
 }
-
 
 //1) вввод числа от пользователя
 //2) вычисление суммы
@@ -25,7 +23,7 @@ void PrintResult(string msg)
 int SimpleSum(int numA)
 {
     int SumOfNumber = 0;
-    for (int i = 1; i < numA; i++)
+    for (int i = 1; i <= numA; i++)
     {
         //SumOfNumber =SumOfNumber + i;
         SumOfNumber+=i;
@@ -33,8 +31,22 @@ int SimpleSum(int numA)
     return SumOfNumber;
 }
 
+int GausseSum(int numA)
+{
+    int SumOfNumber =0;
+    SumOfNumber = (numA*( numA + 1))/2;
+    return SumOfNumber;
+}
+
 int numberA = ReadData("Ввведите число А: ");
 
-int res = SimpleSum(numberA);
+DateTime d1 = DateTime.Now;
+int res1 = SimpleSum(numberA);
+Console.WriteLine(DateTime.Now-d1);
 
-PrintResult("Сумма чисел от 1 до "+ numberA + " равна " + res);
+DateTime d2 = DateTime.Now;
+int res2 = GausseSum(numberA);
+Console.WriteLine(DateTime.Now-d2);
+
+PrintResult("Сумма чисел от 1 до "+ numberA + " равна " + res1);
+PrintResult("Сумма чисел от 1 до "+ numberA + "по Гаусу равна " + res2);
