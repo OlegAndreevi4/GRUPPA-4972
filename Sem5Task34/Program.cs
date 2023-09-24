@@ -42,7 +42,6 @@ void PrintResult(string msg)
     Console.WriteLine(msg);
 }
 
-
 int[] res = GenArr(4);
 PrintArray(res);
 int count = Counter(res);
