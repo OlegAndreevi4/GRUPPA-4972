@@ -25,7 +25,6 @@ void OutArray8()
         Console.WriteLine(arr[arr.Length - 1] + "]");
     }
 
-    //int num = ReadData("Ввведите длину массива: ");
     int[] res = GenArr(7);
     PrintArray(res);
 }
