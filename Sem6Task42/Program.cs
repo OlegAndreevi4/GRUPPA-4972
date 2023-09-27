@@ -45,7 +45,7 @@ Console.WriteLine();
 
 //Alexandr
 
-String bin = Convert.ToString(a, 2);
+// String bin = Convert.ToString(a, 2);
 
-21:31
-String bin = Convert.ToString(int.Parse(Console.ReadLine()??"0"), 2);
+// 21:31
+// String bin = Convert.ToString(int.Parse(Console.ReadLine()??"0"), 2);

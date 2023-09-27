@@ -42,7 +42,7 @@ void Print2DArrayColor(int[,] matrix)
     {
         for(int j=0; j < matrix.GetLength(1); j++)
         {
-            Console.ForegroundColor = colors[new System.Random().Next()];
+            Console.ForegroundColor = colors[new System.Random().Next(0,16)];
             Console.Write(matrix[i,j] + " ");
             Console.ResetColor();
         }
@@ -54,5 +54,5 @@ int row = ReadData("Введите количество строк: ");
 int column = ReadData("Введите количество столбцов: ");
 
 int[,] arr2D = Fill2DArray(row,column,100,10);
-Print2DArray(arr2D);
+//Print2DArray(arr2D);
 Print2DArrayColor(arr2D);
