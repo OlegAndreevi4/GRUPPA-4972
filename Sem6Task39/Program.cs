@@ -37,7 +37,7 @@ int[] SwapNewArray(int[] arr)
 
 void SwapArray(int[] arr)
 {
-    int buferElement = 0;
+    //int buferElement = 0;
     for (int i = 0; i < arr.Length/2; i++)
     {
         (arr[arr.Length-1 - i],arr[i])=(arr[i],arr[arr.Length-1 - i]);
