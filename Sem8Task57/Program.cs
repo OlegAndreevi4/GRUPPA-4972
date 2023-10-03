@@ -27,23 +27,43 @@ void Print2DArray(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write(matrix[i,j]+" ");
-            Console.ResetColor();
+            Console.Write(matrix[i, j] + " ");
         }
         Console.WriteLine();
     }
 }
 
-// 3) Print1D Array
-
-
-int [,] FreqDic(int[,] arr, int len)
+void PrintArray(int[] arr)
 {
-    int[] dic = new int[len]:
-    for(int i = 0; i <)
+    Console.Write("[");
+    for (int i = 0; i < arr.Length - 1; i++)
+    {
+        Console.Write(arr[i] + ", ");
 
+    }
+    Console.WriteLine(arr[arr.Length - 1] + "]");
 }
+
+
+int[] FreqDic(int[,] arr, int len)
+{
+    int[] dic = new int[len];
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            dic[arr[i,j]]++;
+        }
+    }
+    return dic;
+}
+
+Console.Clear();
+int[,] array2D = Fill2DArray(5, 5, 10, 1);
+Print2DArray(array2D);
+Console.WriteLine();
+int[] dic = FreqDic(array2D, 5);
+PrintArray(dic);
 
 
 

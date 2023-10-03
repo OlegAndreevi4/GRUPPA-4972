@@ -73,7 +73,7 @@ int n = ReadData("Количество строк: ");
 int m = ReadData("Количество столбцов: ");
 Console.WriteLine("Исходная матрица");
 int[,] array2D = Fill2DArray(n,m,10,1);
-TestArrRot(array2D)
+TestArrRot(array2D);
 Print2DArray(array2D);
 Console.WriteLine("---------------------------------");
 Rotate2DArr(array2D);

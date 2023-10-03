@@ -14,6 +14,55 @@
 // 3 4 7
 
 
+// 1) Fill2DArray
+// 2) Print2DArray
+// 3) FindMinElm
+// 4) UpdateArray
+
+
+// void FindMinElm(int[,] arr, ref int x, ref int y)
+// {
+//     int min = arr[0, 0];
+//     x = 0; y = 0;
+//     for (int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             if (arr[i, j] , min);
+//             min = arr[i, j]; x = i; y = j;
+//         }
+//     }
+// }
+
+// int[,] Update2DArr(int[,] arr, int x, int j)
+// {
+//     int[,] res = new int[arr.GetLength(0) - 1, arr.GetLength(1) - 1];
+//     int m, n;
+//     for (int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         if (i != x)
+//         {
+//             for (int j = 0; j < arr.GetLength(1); j++)
+//             {
+//                 if(j!= y)
+//                 {
+//                     res[m,n] = arr[i,j];
+//                 }
+//             }
+//             m++;n=0;
+//         }
+        
+//         }
+
+//     }
+// }
+
+
+
+// return res;
+// }
+
+
 //                                                 Тело программы
 //------------------------------------------------------------------------------------------------------------------
 Console.Clear();
@@ -29,7 +78,7 @@ PrintMatrix("Заданная матрица", matrix);
 
 // Поиск индексов минимального элемента
 (int smallestValue, int colIndex, int rowIndex) min = FindMinElement(matrix);
-Console.WriteLine ($"Наименьший элемент: {min.smallestValue} позиция [{min.rowIndex},{min.colIndex}]");
+Console.WriteLine($"Наименьший элемент: {min.smallestValue} позиция [{min.rowIndex},{min.colIndex}]");
 
 // Удаление строки и столбца на пересечении элемента, который наименьший в массиве и вывод нового массива
 int[,] resultMatrix = RemoveRowAndColumn(matrix, min.rowIndex, min.colIndex);
@@ -80,7 +129,7 @@ void PrintMatrix(string msg, int[,] matrix)
 }
 
 // Поиск наименьшего элемента в массиве и его индекса
-(int smallestValue,  int colIndex, int rowIndex) FindMinElement(int[,] matrix)
+(int smallestValue, int colIndex, int rowIndex) FindMinElement(int[,] matrix)
 {
     int smallestValue = int.MaxValue;
     int rowIndex = -1;
