@@ -12,7 +12,7 @@ public class Answer
     {
         for(int j=0; j < n; j++)
         {
-            array2D[i,j] = Math.Round((rnd.NextDouble() + rnd.Next(-10, 10)), 1);
+            array2D[i,j] = Math.Round((rnd.NextDouble() + rnd.Next(minLimitRandom, maxLimitRandom)), 1);
         }
     }
     return array2D;
