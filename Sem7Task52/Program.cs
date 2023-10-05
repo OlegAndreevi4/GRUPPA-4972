@@ -8,6 +8,90 @@
 // * Дополнительно вывести среднее арифметическое по диагоналям 
 // и диагональ выделить разным цветом.
 
+// 1) ReadData
+// 2) Gen2DArr
+// 3) Print2DArr
+// 4) SortArr
+
+// Ввод данный
+int ReadData(string msg)
+{
+    Console.WriteLine(msg);
+    int num = int.Parse(Console.ReadLine() ?? "0");
+    return num;
+}
+
+// Заполняет массив случайными цифрами
+int[,] Gen2DArr(int countRow, int countColumn, int topBorder, int downBorder)
+{
+    int[,] array2D = new int[countRow, countColumn];
+    for (int i = 0; i < countRow; i++)
+    {
+        for (int j = 0; j < countColumn; j++)
+        {
+            array2D[i, j] = new Random().Next(downBorder, topBorder + 1);
+        }
+    }
+    return array2D;
+}
+
+// Вывод массива
+void Print2DArr(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write(matrix[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+// Сортировка массива
+void SortArr(int[,] arr)
+{
+    int[] buf = new int[arr.GetLength(1)];
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            buf[j] = arr[i, j];
+        }
+        int n = arr.Length; //Сортировка пузырьком
+        for (int a = 0; a < n - 1; a++)
+        {
+            for (int j = 0; j < n - a - 1; j++)
+            {
+                if (buf[j] > buf[j + 1])
+                {
+                    int temp = buf[j];
+                    buf[j] = buf[j + 1];
+                    buf[j + 1] = temp;
+                }
+            }
+        }
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            arr[i, j] = buf[j];
+        }
+    }
+
+}
+
+int row = ReadData("введите количество строк: ");
+int column = ReadData("Введите количество столбцов: ");
+int[,] arr2D = Gen2DArr(row, column, 10, 1);
+Print2DArr(arr2D);
+SortArr(arr2D);
+Print2DArr(arr2D);
+
+
+
+
+
+
+
 
 // Иван
 
@@ -56,7 +140,7 @@
 //       Console.WriteLine("The averages in columns are: ");
 //       for(int i = 0; i < list.Length; i++)
 //         Console.Write(list[i].ToString("0.00")+"\t");
-    
+
 //         Console.WriteLine();    
 //     }
 //   // Поиск средних по столбцам
@@ -96,7 +180,7 @@
 //     {
 //         Console.WriteLine($"Среднее на главной диаганали: {diagAvg[0].ToString("0.00")}, а среднее по побочной: {diagAvg[1].ToString("0.00")}");
 //     }
-      
+
 //    Console.Clear();
 // int n = ReadData("Введите количество строк");
 // int m = ReadData("Введите количество стобцов");
