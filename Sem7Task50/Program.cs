@@ -11,7 +11,7 @@ public class Answer
         {
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
-                Console.Write(matrix[i, j] + "\t");
+                Console.Write(matrix[i,j] + "\t");
             }
             Console.WriteLine();
         }
@@ -56,7 +56,7 @@ public class Answer
         }
         else
         {
-            Console.WriteLine("The number in [" + X + "," + Y + "] is " + results[0]);
+            Console.WriteLine("The number in [" + X + ", " + Y + "] is " + results[0]);
         }
     }
 
