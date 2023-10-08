@@ -20,7 +20,7 @@ int ReadData(string line)
 //GenLineRec(2)           2
 //GenLineRec(1)             1
 
-//-------------------               0
+//-------------------          0
 //-------------------           -1 
 
 void GenLineRec(int num)
