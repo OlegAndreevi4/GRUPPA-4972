@@ -236,9 +236,6 @@ int[,] FillSpiral(int[,] matrix, int startNumber = 1, int count = 1)
     return matrix;
 }
 
-
-
-
 // Метод, принимает строку, выводит в консоль
 static void PrintResult(string line)
 {
