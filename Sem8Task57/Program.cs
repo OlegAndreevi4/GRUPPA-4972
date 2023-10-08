@@ -3,7 +3,7 @@
 
 // 1) Fill2DArray
 // 2) Print2DArray
-// 3) Print1D Array
+// 3) Print1DArray
 // 4) FreqDic
 
 
